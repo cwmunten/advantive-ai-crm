@@ -108,3 +108,51 @@ button.modernKpi small{display:block!important;font-size:12px!important}
 @media(max-width:1100px){.modernCustomerGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.customersIntro{align-items:stretch;flex-direction:column}.customersIntro .primary{width:100%}.customersTools{align-items:stretch;flex-direction:column}.customerSearch,.exportButton{width:100%}.modernCustomerGrid{grid-template-columns:1fr}}
 
 .dossierActions{gap:10px;flex-wrap:wrap}.dossierActions .dangerOutline{border:1px solid #e5caca;background:#fff;color:#a94444;border-radius:9px;padding:10px 14px;font-weight:700;cursor:pointer}.dossierActions .dangerOutline:hover{background:#fff7f7;border-color:#d8aaaa}
+
+/* =========================================================
+   DYNAMICS 365 CLASSIC THEME — visual restyle only
+   ========================================================= */
+:root{--dyn-black:#111;--dyn-blue:#0026b3;--dyn-cyan:#00a4d6;--dyn-light:#f3f3f3;--dyn-line:#d7d7d7;--dyn-text:#222;--dyn-muted:#666;--dyn-red:#c0174b;--orange:#0078d4}
+body{background:#f3f3f3!important;color:var(--dyn-text)!important;font-family:"Segoe UI",Arial,sans-serif!important}
+.shell{background:#f3f3f3!important}
+
+/* Left navigation becomes Dynamics-style dark command rail */
+.sidebar{background:#111!important;border:0!important;box-shadow:none!important}
+.brand{border-bottom:1px solid #333!important}.brandMark{border-radius:0!important;background:#00a4d6!important}.brandText b,.sidebar nav button,.profile b{color:#fff!important}.brandText span,.profile span{color:#bdbdbd!important}
+.sidebar nav button{border-radius:0!important;border-left:4px solid transparent!important;background:transparent!important}
+.sidebar nav button:hover{background:#292929!important}.sidebar nav button.active{background:#333!important;border-left-color:#00a4d6!important;color:#fff!important}
+.profile{border-top:1px solid #333!important}.avatar{border-radius:0!important;background:#fff!important;color:#0026b3!important}
+
+/* Main page / Dynamics work area */
+.content{background:#f3f3f3!important}.pageHeader{background:#fff!important;border-bottom:1px solid var(--dyn-line)!important;padding:18px 26px!important;margin:-28px -32px 22px!important}.pageHeader h1{font-weight:400!important;color:#222!important}.pageHeader p{color:#666!important}
+button,.primary,.ghost,.exportButton{border-radius:0!important;box-shadow:none!important}
+.primary{background:#0026b3!important;border-color:#0026b3!important;color:#fff!important}.primary:hover{background:#001c85!important}
+
+/* Dashboard */
+.copilotDashboard{gap:14px!important}.copilotHero{min-height:auto!important;padding:18px 22px!important;border:0!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;border-bottom:1px solid var(--dyn-line)!important}.copilotHero:after{display:none!important}.copilotEyebrow{color:#0026b3!important}.copilotHero h2{font-weight:400!important;color:#222!important}.copilotHero p{color:#666!important}.copilotOrb{border-radius:0!important;background:#0026b3!important;box-shadow:none!important}
+.dashboardKpis{gap:12px!important}button.modernKpi{min-height:104px!important;border:1px solid #ccc!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}button.modernKpi:hover{transform:none!important;border-color:#0026b3!important;box-shadow:inset 0 4px 0 #0026b3!important}.kpiIcon,button.modernKpi .kpiIcon{border-radius:0!important;background:#0026b3!important;color:#fff!important}.modernKpi label{color:#0026b3!important}.modernKpi strong{font-weight:400!important;color:#222!important}
+.modernPanel{border:1px solid #ccc!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}.modernPanelHead{border-bottom:4px solid #0026b3!important;background:#fff!important}.modernPanelHead span{color:#0026b3!important}.modernPanelHead h2{font-weight:400!important;color:#222!important}.modernPanelHead button{color:#0026b3!important}.dashboardAction,.recentConversation{border-top:1px solid #e4e4e4!important}.dashboardAction:hover,.recentConversation:hover{background:#eef6fb!important}.conversationAccent{border-radius:0!important;background:#00a4d6!important}.dashboardAction time{border-radius:0!important;background:#eee!important}
+
+/* Customers workspace */
+.customersIntro{padding:18px 22px!important;border:1px solid #ccc!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;border-top:5px solid #0026b3!important}.customersIntro span{color:#0026b3!important}.customersIntro h2{font-weight:400!important}.customersTools{background:#fff!important;border:1px solid #ccc!important;padding:10px!important}.customerSearch,.exportButton{border-radius:0!important;box-shadow:none!important}.modernCustomerGrid{gap:12px!important}.modernCustomerCard{border:1px solid #ccc!important;border-radius:0!important;box-shadow:none!important;padding:0!important}.modernCustomerCard:hover{transform:none!important;border-color:#0026b3!important;box-shadow:inset 0 4px 0 #0026b3!important}.modernCustomerHead{padding:16px!important;background:#fff!important}.customerAvatar{border-radius:0!important;background:#0026b3!important;color:#fff!important}.customerIdentity h3{font-weight:400!important;color:#222!important}.customerContactBlock{margin:0!important;border-radius:0!important;background:#f3f3f3!important;padding:13px 16px!important}.customerContactBlock label{color:#0026b3!important}.customerQuickInfo{padding:13px 16px!important}.customerCardFooter{padding:12px 16px!important;background:#fafafa!important}.openCustomer{color:#0026b3!important}
+
+/* Generic cards, lists, toolbars */
+.card{border:1px solid #ccc!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}.toolbar{background:#fff!important}.search{border-radius:0!important}.row{border-color:#ddd!important}.row:hover{background:#eef6fb!important}.badge{border-radius:0!important}
+
+/* Customer dossier */
+.dossier{border:1px solid #ccc!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}.dossierHeader{background:#fff!important;border-bottom:1px solid #ccc!important}.dossierHeader h1{font-weight:400!important}.companyBig{border-radius:0!important;background:#0026b3!important;color:#fff!important}.tabs{background:#f3f3f3!important;border-bottom:1px solid #ccc!important}.tabs button{border-radius:0!important;color:#555!important}.tabs button.active{color:#0026b3!important;border-bottom:4px solid #0026b3!important;background:#fff!important}.infoGrid>div{border:1px solid #ccc!important;border-radius:0!important;background:#fff!important}.infoGrid label{color:#666!important}.primaryContactCard{background:#f3f3f3!important}.dossierActions .ghost,.dossierActions .dangerOutline{border-radius:0!important}
+
+/* Notes, actions and detail views */
+.noteScreen{background:rgba(243,243,243,.97)!important}.noteCard,.customerFormCard{border:1px solid #aaa!important;border-radius:0!important;box-shadow:0 8px 30px rgba(0,0,0,.15)!important}.noteHead,.customerFormHead{background:#fff!important;border-bottom:5px solid #0026b3!important}.noteHead label,.customerFormHead label{color:#0026b3!important}.noteHead h2,.customerFormHead h2{font-weight:400!important}.previewMeta>div,.proposedAction,.savedRemarks,.emptyRemarks{border-radius:0!important}.conceptField input,.conceptField textarea,.editableRow input,.editableAction input,.editableAction textarea{border-radius:0!important}.aiProcessing,.aiError{border-radius:0!important}
+
+/* Customer forms */
+.noteScreen.customerFormScreen{background:#f3f3f3!important}.customerFormScreen .customerFormCard{border-radius:0!important}.customerFormScreen .customerFormHead{background:#fff!important;border-bottom:5px solid #0026b3!important}.customerFormScreen .customerFormHead label{color:#0026b3!important}.customerFormScreen .customerFormHead>button{border-radius:0!important}.customerFormScreen .formSectionIcon{border-radius:0!important;background:#0026b3!important;color:#fff!important}.customerFormScreen .customerFormGrid input,.customerRemarksInput{border-radius:0!important}.customerFormScreen .customerFormGrid input:focus,.customerRemarksInput:focus,.remarksView textarea:focus{border-color:#00a4d6!important;box-shadow:0 0 0 2px rgba(0,164,214,.16)!important}.customerFormScreen .customerFormActions button{border-radius:0!important}.customerFormScreen .customerFormActions .primary{background:#0026b3!important;border-color:#0026b3!important;box-shadow:none!important}
+
+/* Remarks */
+.remarksViewHead span,.remarksIntro span{color:#0026b3!important}.remarksView textarea,.savedRemarks,.emptyRemarks{border-radius:0!important}.remarksActions .primary{border-radius:0!important;background:#0026b3!important;border-color:#0026b3!important}
+
+/* Dynamics tile accent strip */
+.modernCustomerCard:nth-child(4n+1){border-top:5px solid #0026b3!important}.modernCustomerCard:nth-child(4n+2){border-top:5px solid #008fc5!important}.modernCustomerCard:nth-child(4n+3){border-top:5px solid #e45b2b!important}.modernCustomerCard:nth-child(4n+4){border-top:5px solid #c0174b!important}
+
+/* Responsive */
+@media(max-width:680px){.pageHeader{margin:-18px -16px 16px!important}.sidebar nav button.active{border-left-color:#00a4d6!important}.modernCustomerCard{border-top-width:4px!important}.customerFormScreen .customerFormCard{border:0!important}}
