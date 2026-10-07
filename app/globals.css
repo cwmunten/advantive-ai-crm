@@ -212,3 +212,6 @@ button,.primary,.ghost,.exportButton{border-radius:0!important;box-shadow:none!i
 
 /* Action detail header without top close button */
 .taskDetailHead{grid-template-columns:minmax(0,1fr) auto}.taskDetailHead>.noteHeadActions{justify-self:end;flex-shrink:0}@media(max-width:600px){.taskDetailHead{grid-template-columns:1fr}.taskDetailHead>.noteHeadActions{grid-column:1;justify-self:start;justify-content:flex-start;width:100%;margin-top:8px}.taskDetailHead>.noteHeadActions .ghost,.taskDetailHead>.noteHeadActions .deleteBtn{display:inline-flex}}
+
+/* Refined action detail header alignment */
+.taskDetailHead{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:24px;align-items:center}.taskDetailHead>.noteHeadActions{justify-self:end;display:flex;align-items:center;gap:10px}.taskDetailHead>.noteHeadActions>button{min-height:42px;padding:9px 14px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}@media(max-width:600px){.taskDetailHead{grid-template-columns:1fr;gap:14px;align-items:start}.taskDetailHead>.noteHeadActions{grid-column:1;justify-self:start;justify-content:flex-start;width:auto;margin-top:0;gap:10px}.taskDetailHead>.noteHeadActions .ghost,.taskDetailHead>.noteHeadActions .deleteBtn{display:inline-flex;min-height:44px}}
