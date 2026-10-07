@@ -209,3 +209,6 @@ button,.primary,.ghost,.exportButton{border-radius:0!important;box-shadow:none!i
 
 /* Three-way action workflow */
 .taskDetail .taskWorkflow .closeActionButton{background:#fff!important;border:1px solid #c5d1da!important;color:#536b7d!important;font-weight:600!important}.taskDetail .taskWorkflow .closeActionButton:hover{background:#f4f7f9!important;border-color:#8fa5b5!important;color:#17364e!important}
+
+/* Action detail header without top close button */
+.taskDetailHead{grid-template-columns:minmax(0,1fr) auto}.taskDetailHead>.noteHeadActions{justify-self:end;flex-shrink:0}@media(max-width:600px){.taskDetailHead{grid-template-columns:1fr}.taskDetailHead>.noteHeadActions{grid-column:1;justify-self:start;justify-content:flex-start;width:100%;margin-top:8px}.taskDetailHead>.noteHeadActions .ghost,.taskDetailHead>.noteHeadActions .deleteBtn{display:inline-flex}}
