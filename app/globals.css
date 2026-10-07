@@ -206,3 +206,6 @@ button,.primary,.ghost,.exportButton{border-radius:0!important;box-shadow:none!i
 .taskStatus{display:inline-flex!important;align-items:center!important;gap:6px!important;width:max-content!important;margin-top:5px!important;font-size:12px!important;font-weight:600!important;line-height:1.2!important;color:#536b7d!important}.taskStatus i{display:block!important;width:9px!important;height:9px!important;min-width:9px!important;border-radius:50%!important;background:#6b7f8e!important}
 .taskStatus.status-oppakken i,.taskStatus.status-open i{background:#0078d4!important}.taskStatus.status-in-uitvoer i{background:#7b61c9!important}.taskStatus.status-wacht-op-antwoord i{background:#e49b16!important}.taskStatus.status-plannen i{background:#00a3a3!important}.taskStatus.status-uitzoeken i{background:#d45b90!important}.taskStatus.status-afgerond i{background:#2e8b57!important}
 .dashboardAction .taskStatus{margin-top:4px!important}.actionrow .taskStatus{margin-top:5px!important}
+
+/* Three-way action workflow */
+.taskDetail .taskWorkflow .closeActionButton{background:#fff!important;border:1px solid #c5d1da!important;color:#536b7d!important;font-weight:600!important}.taskDetail .taskWorkflow .closeActionButton:hover{background:#f4f7f9!important;border-color:#8fa5b5!important;color:#17364e!important}
