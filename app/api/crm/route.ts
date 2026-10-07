@@ -26,7 +26,7 @@ export async function GET(){
 export async function POST(request:Request){
  try{
   const {entity,data}=await request.json();
-  const table:any={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}[entity];
+  const tables:Record<string,string>={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}; const table=tables[String(entity)];
   if(!table) return NextResponse.json({error:'Onbekend type'},{status:400});
   const r=await req(table,{method:'POST',headers:{'Prefer':'return=representation'},body:JSON.stringify(data)});
   return NextResponse.json(r?.[0]||r);
@@ -35,7 +35,7 @@ export async function POST(request:Request){
 export async function PATCH(request:Request){
  try{
   const {entity,id,data}=await request.json();
-  const table:any={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}[entity];
+  const tables:Record<string,string>={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}; const table=tables[String(entity)];
   const r=await req(table+'?id=eq.'+id,{method:'PATCH',headers:{'Prefer':'return=representation'},body:JSON.stringify(data)});
   return NextResponse.json(r?.[0]||r);
  }catch(e:any){return NextResponse.json({error:e.message},{status:500})}
@@ -43,7 +43,7 @@ export async function PATCH(request:Request){
 export async function DELETE(request:Request){
  try{
   const {entity,id}=await request.json();
-  const table:any={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}[entity];
+  const tables:Record<string,string>={customer:'crm_customers',contact:'crm_contacts',note:'crm_notes',task:'crm_tasks'}; const table=tables[String(entity)];
   await req(table+'?id=eq.'+id,{method:'DELETE'});
   return NextResponse.json({ok:true});
  }catch(e:any){return NextResponse.json({error:e.message},{status:500})}
