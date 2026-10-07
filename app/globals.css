@@ -156,3 +156,6 @@ button,.primary,.ghost,.exportButton{border-radius:0!important;box-shadow:none!i
 
 /* Responsive */
 @media(max-width:680px){.pageHeader{margin:-18px -16px 16px!important}.sidebar nav button.active{border-left-color:#00a4d6!important}.modernCustomerCard{border-top-width:4px!important}.customerFormScreen .customerFormCard{border:0!important}}
+
+/* Free Dutch company lookup */
+.companySearchInput{display:flex;gap:10px;align-items:stretch}.companySearchInput input{flex:1}.companySearchInput button{white-space:nowrap}.companySearchResults{display:flex;flex-direction:column;gap:6px;padding:10px;border:1px solid #d1d1d1;background:#f7f7f7}.companySearchResults>button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:10px 12px;border:1px solid #ddd;background:#fff;cursor:pointer}.companySearchResults>button:hover{border-color:#0026b3;background:#f3f6ff}.companySearchResults span,.companySearchResults em,.customerFormGrid label small,.companySearchResults small{font-size:12px;font-weight:400;color:#666}.companySearchResults em{font-style:normal;color:#0026b3}@media(max-width:700px){.companySearchInput{flex-direction:column}.companySearchInput button{width:100%}}
