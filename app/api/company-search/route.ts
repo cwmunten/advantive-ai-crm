@@ -6,11 +6,14 @@ export async function GET(req:NextRequest){
   const params=new URLSearchParams({q:q+', Nederland',format:'jsonv2',countrycodes:'nl',addressdetails:'1',extratags:'1',namedetails:'1',limit:'8'});
   try{
     const r=await fetch('https://nominatim.openstreetmap.org/search?'+params.toString(),{
-      headers:{'User-Agent':'Advantive-AI-CRM/1.0 (company lookup)','Accept-Language':'nl-NL,nl;q=0.9'},
-      next:{revalidate:86400}
+      headers:{'User-Agent':'Advantive-AI-CRM/1.0','Accept':'application/json','Accept-Language':'nl-NL,nl;q=0.9'},
+      cache:'no-store'
     });
-    if(!r.ok)throw new Error('Bron tijdelijk niet beschikbaar');
+    if(!r.ok)throw new Error('De openbare bedrijfsbron is tijdelijk niet beschikbaar.');
+    const type=r.headers.get('content-type')||'';
+    if(!type.includes('json'))throw new Error('De openbare bedrijfsbron gaf een ongeldig antwoord.');
     const data:any[]=await r.json();
+    if(!Array.isArray(data))throw new Error('De openbare bedrijfsbron gaf een ongeldig antwoord.');
     const results=data.map(x=>{
       const a=x.address||{},e=x.extratags||{},n=x.namedetails||{};
       const road=a.road||a.pedestrian||a.residential||a.footway||'';
